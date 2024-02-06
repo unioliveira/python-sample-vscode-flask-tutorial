@@ -34,7 +34,7 @@ steps:
    python -m pip install --upgrade pip
    python -m pip install -r ./requirements.txt
    export set FLASK_APP=hello_app.webapp
-   python -m flask run
+   python -m flask
   displayName: 'Configure venv and Flask_app'
 
 - task: PublishPipelineArtifact@1
