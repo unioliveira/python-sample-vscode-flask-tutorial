@@ -42,7 +42,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: "Publish HTML"
   inputs:
-    pathToPublish: './s/' #'$(System.ArtifactsDirectory)' #"/tmp/myapp-publish/"
+    pathToPublish: './' #'$(System.ArtifactsDirectory)' #"/tmp/myapp-publish/"
     artifactName: "drop"
 - task: TwineAuthenticate@1
   inputs:
