@@ -39,11 +39,11 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
     
-#- task: PublishBuildArtifacts@1
-#  displayName: "Publish HTML"
-#  inputs:
-#    pathToPublish: '$(System.ArtifactsDirectory)' #"/tmp/myapp-publish/"
-#    artifactName: "drop"
+- task: PublishBuildArtifacts@1
+  displayName: "Publish HTML"
+  inputs:
+    pathToPublish: './s/' #'$(System.ArtifactsDirectory)' #"/tmp/myapp-publish/"
+    artifactName: "drop"
 - task: TwineAuthenticate@1
   inputs:
     artifactFeed: 'RM349865'
