@@ -39,7 +39,7 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
     
-- publish: $(Build.ArtifactStagingDirectory)/Application$(Build.BuildId).zip
+- publish: Application$(Build.BuildId).zip #$(Build.ArtifactStagingDirectory)/Application$(Build.BuildId).zip
   displayName: 'Upload Package'
   artifact: drop
 - task: TwineAuthenticate@1
