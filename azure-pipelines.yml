@@ -27,6 +27,15 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+-script: |
+   python3 -m venv .env
+   source .env/bin/activate
+   python3 -m pip install --upgrade pip
+   python3 -m pip install -r ./requirements.txt
+   export set FLASK_APP=hello_app.webapp
+   python3 -m flask run
+  displayName: 'Configure venv and Flask_app'
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
