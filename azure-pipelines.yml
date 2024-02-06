@@ -28,7 +28,7 @@ steps:
     pytest
   displayName: 'pytest'
 
--script: |
+- script: |
    python -m venv .env
    source .env/bin/activate
    python -m pip install --upgrade pip
