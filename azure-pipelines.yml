@@ -27,3 +27,7 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- task: TwineAuthenticate@1
+  inputs:
+    artifactFeed: 'RM349865'
