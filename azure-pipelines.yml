@@ -39,9 +39,11 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
     
-- publish: Application$(Build.BuildId).zip #$(Build.ArtifactStagingDirectory)/Application$(Build.BuildId).zip
-  displayName: 'Upload Package'
-  artifact: drop
+- task: PublishBuildArtifacts@1
+  displayName: "Publish HTML"
+  inputs:
+    pathToPublish: '$(System.ArtifactsDirectory)' #"/tmp/myapp-publish/"
+    artifactName: "drop"
 - task: TwineAuthenticate@1
   inputs:
     artifactFeed: 'RM349865'
