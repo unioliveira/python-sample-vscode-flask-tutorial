@@ -37,3 +37,12 @@ stages:
               definition: '13'
               buildVersionToDownload: 'latest'
               targetPath: '$(Pipeline.Workspace)'
+          - task: DownloadBuildArtifacts@1
+            inputs:
+              buildType: 'specific'
+              project: '872b5e40-c4d3-4422-a791-daff8935cd8d'
+              pipeline: '13'
+              buildVersionToDownload: 'latest'
+              downloadType: 'single'
+              artifactName: 'drop'
+              downloadPath: '$(System.ArtifactsDirectory)'
